@@ -1,0 +1,17 @@
+Dijkstra Implementation Documentation
+Data Members
+int vertexCount: Number of vertices in the graph.
+int edgeCount: Number of edges in the graph.
+EMap<string, EMap<string, int>> adjList: Adjacency list representing the graph, where each node maps to its neighbors and the corresponding edge weights.
+EMap<string, int> distances: Stores the shortest distance from the source to each node.
+EMap<string, string> parent: Stores the parent of each node to reconstruct the path.
+EVector<string> vertexNames: Stores the names of the vertices.
+
+
+Member Functions:
+Constructor:Initializes the graph with the given number of vertices and edges.
+Add Neighbor: Adds an edge between the source and destination nodes with the given distance.
+Print Graph: Prints the adjacency list of the graph.
+find_shortest_path(string source, bool funCall=false): Finds the shortest path from the source to all other nodes using Dijkstra's algorithm. It initializes distances and visited maps, iteratively finds the minimum distance vertex, and updates distances to neighbors.
+get_path(string source, string destination): Recursively reconstructs and prints the path from the source to the destination using the parent map.
+get_path_from_two_nodes() : Prompts the user to input source and destination nodes and prints the shortest path between them. 
